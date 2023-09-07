@@ -121,10 +121,21 @@ iAQ-Core	Start
 working well , although after a short time, IAQ still says start.?!
 didn't solder it to vindrikting module
 
+UPDATE: after maybe 5mins and a reboot
+BME280 Temperature	26.6 °C
+BME280 Humidity	52.9 %
+BME280 Dew point	16.2 °C
+BME280 Pressure	1012.6 hPa
+iAQ-Core eCO₂	458 ppm
+iAQ-Core TVOC	128 ppb
 
 
+
+
+DONE see an update from IAQ (instead of start)
 
 
 TODO check vindrikting works
-TODO see an update from IAQ (instead of start)
+
 TODO set the module and auto set the pins for i2c sda scl
+TODO program the other ESP8566 device and get that working too
