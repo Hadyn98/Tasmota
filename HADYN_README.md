@@ -86,5 +86,45 @@ These binaries are built using core 2.7.4.9
 Release binaries for Tasmota firmware 13.1.0 on ESP8266
 
 
+have modified  these 2 files:
+* tasmota/user_config_override.h 
+* /platformio_override.ini
 
 
+built 4M program size, with filesystem support
+
+programmed with tasmotizer  ver1.2 , then rebooted, then send-config with wifi details 
+running i2cscan gives
+
+17:29:39.490 CMD: i2cscan
+17:29:39.510 RSL: RESULT = {"I2CScan":"Device(s) found at 0x5a 0x76"}
+
+STATE = {"Time":"1970-01-01T00:00:16","Uptime":"0T00:00:11","UptimeSec":11,"Heap":23,"SleepMode":"Dynamic","Sleep":50,"LoadAvg":1191,"MqttCount":0,"Wifi":{"AP":1,"SSId":"asus_2.4g","BSSId":"30:5A:3A:6D:F8:C8","Channel":4,"Mode":"11n","RSSI":86,"Signal":-57,"LinkCount":1,"Downtime":"0T00:00:03"}}
+17:29:16.650 CMD: 
+
+00:00:00.087 Project tasmota - Tasmota Version 13.1.0.2(tasmota)-2_7_4_9(2023-09-07T16:04:47)
+00:00:00.528 WIF: Connecting to AP1 asus_2.4g Channel 4 BSSId 30:5A:3A:6D:F8:C8 in mode 11n as tasmota-03921F-4639...
+00:00:01.754 WIF: Connected
+00:00:02.008 HTP: Web server active on tasmota-03921F-4639 with IP address 192.168.1.21
+00:00:08.656 RSL: INFO1 = {"Info1":{"Module":"Generic","Version":"13.1.0.2(tasmota)","FallbackTopic":"cmnd/DVES_03921F_fb/","GroupTopic":"cmnd/tasmotas/"}}
+00:00:08.661 RSL: INFO2 = {"Info2":{"WebServerMode":"Admin","Hostname":"tasmota-03921F-4639","IPAddress":"192.168.1.21"}}
+
+D3 GPIO0	     SDA
+D4 GPIO2      SCL
+
+BME280 Temperature	26.6 °C
+BME280 Humidity	53.1 %
+BME280 Dew point	16.2 °C
+BME280 Pressure	1012.6 hPa
+iAQ-Core	Start
+
+working well , although after a short time, IAQ still says start.?!
+didn't solder it to vindrikting module
+
+
+
+
+
+TODO check vindrikting works
+TODO see an update from IAQ (instead of start)
+TODO set the module and auto set the pins for i2c sda scl
