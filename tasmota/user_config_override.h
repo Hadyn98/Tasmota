@@ -100,13 +100,15 @@ Examples :
 #define LONGITUDE              -0.3095817
 
 #define USE_VINDRIKTNING                         // Add support for IKEA VINDRIKTNING particle concentration sensor (+0k6 code)
-#define VINDRIKTNING_SHOW_PM1                  // Display undocumented/supposed PM1.0 values
-#define VINDRIKTNING_SHOW_PM10                 // Display undocumented/supposed PM10 values
+// #define VINDRIKTNING_SHOW_PM1                  // Display undocumented/supposed PM1.0 values
+// #define VINDRIKTNING_SHOW_PM10                 // Display undocumented/supposed PM10 values
+
 
 
 #define USE_BMP                                // [I2cDriver10] Enable BMP085/BMP180/BMP280/BME280 sensors (I2C addresses 0x76 and 0x77) (+4k4 code)
 #define USE_BME68X                           // Enable support for BME680/BME688 sensor using Bosch BME68x library (+6k9 code)
 #define USE_IAQ                                // [I2cDriver46] Enable iAQ-core air quality sensor (I2C address 0x5a) (+0k6 code)
+
 
 /** 7-sept HADYN  definately include these above  ***/
 
